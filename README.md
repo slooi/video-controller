@@ -2,7 +2,7 @@
 Tampermonkey script to control video speed
 
 # Usage
-1) Install tampermonkey
+1) Install tampermonkey to chrome browser
 2) Navigate to tampermonkey dashboard
 3) Click the + icon close to the top right of the dashboard
 4) Copy video controller script from this repo
