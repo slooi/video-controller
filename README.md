@@ -10,7 +10,7 @@ Tampermonkey script to control video speed
 6) Press the keys "Control + s" to save script 
 
 # Usage
-numlock => toggle video playback speed text
-numpad * => reduce video playback speed by 0.1
-numpad - => increase video playback speed by 0.1
-numpad + => set video playeback speed to 1.0
+- numlock => toggle video playback speed text
+- numpad * => reduce video playback speed by 0.1
+- numpad - => increase video playback speed by 0.1
+- numpad + => set video playeback speed to 1.0
