@@ -8,7 +8,7 @@
 
     let playspeed = 1
     let showDisplay = 0
-    let shiftDown = 0
+    let controlDown = 0
 
     window.onload = function(){
         const vidEle = selectVideo()
@@ -17,14 +17,15 @@
         }
     }
     window.addEventListener('keyup',e=>{
-        if(e.code === 'ShiftLeft' || e.code === 'ShiftRight'){
-            shiftDown = 0
+        if(e.code === 'ControlLeft' || e.code === 'ControlRight'){
+            console.log("UP")
+            controlDown = 0
         }
     })
     window.addEventListener('keydown',e=>{
         if(selectVideo()!= undefined){
-            if(e.code === 'ShiftLeft' || e.code === 'ShiftRight'){
-                shiftDown = 1
+            if(e.code === 'ControlLeft' || e.code === 'ControlRight'){
+                controlDown = 1
             }
             switch(e.code){
                 case 'NumpadSubtract':
@@ -53,7 +54,7 @@
     // SPEED FUNCTIONS
     function goBack(){
         const vid = selectVideo()
-        if(shiftDown){
+        if(controlDown){
             // if shift is down
             vid.currentTime -= 2
         }else{
@@ -62,7 +63,7 @@
     }
     function goForwards(){
         const vid = selectVideo()
-        if(shiftDown){
+        if(controlDown){
             // if shift is down
             vid.currentTime += 2
         }else{
