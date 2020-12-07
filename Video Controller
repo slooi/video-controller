@@ -30,27 +30,35 @@
             switch(e.code){
                 case 'NumpadSubtract':
                     increaseSpeed()
+                    setPlaybackrateAndChangeSpeed()
                     break;
                 case 'NumpadMultiply':
                     decreaseSpeed()
+                    setPlaybackrateAndChangeSpeed()
                     break;
                 case 'NumpadAdd':
                     resetSpeed()
+                    setPlaybackrateAndChangeSpeed()
                     break;
                 case 'NumLock':
                     toggleDisplay()
+                    setPlaybackrateAndChangeSpeed()
                     break;
                 case 'NumpadDecimal':
                     goBack()
+                    setPlaybackrateAndChangeSpeed()
                     break;
                 case 'NumpadEnter':
                     goForwards()
+                    setPlaybackrateAndChangeSpeed()
                     break;
             }
-            selectVideo().playbackRate = playspeed
-            changeSpeed()
         }
     })
+    function setPlaybackrateAndChangeSpeed(){
+            selectVideo().playbackRate = playspeed
+            changeSpeed()
+    }
     // SPEED FUNCTIONS
     function goBack(){
         const vid = selectVideo()
